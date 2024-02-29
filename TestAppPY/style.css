@@ -1,0 +1,59 @@
+#title {
+  margin-bottom: 2.7vw !important;
+  margin-top: 1.3vw !important;
+  font-weight: bold;
+}
+nav {
+  overflow: hidden;
+}
+
+@media (min-width: 800px) {
+  .w-lg-25 {
+    width: 25% !important;
+  }
+}
+
+@media (max-width: 800px) {
+  #title {
+    font-size: 8vw !important;
+  }
+  .card-title {
+    font-size: 10vw !important;
+  }
+}
+#aboutUs {
+  transform: translate(-50%, -50%);
+}
+#contactUs {
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 900px) {
+  #aboutUs {
+    width: 75% !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  #contactUs {
+    width: 75% !important;
+  }
+}
+
+.blur {
+  filter: blur(3.7px);
+}
+#aboutUs {
+  background: rgba(0, 0, 0, 0.89) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255, 255, 255, 0.071) !important;
+}
+#contactUs {
+  background: rgba(0, 0, 0, 0.89) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-radius: 10px !important;
+  border: 1px solid rgba(255, 255, 255, 0.071) !important;
+}
