@@ -15,5 +15,9 @@ _____________________________________________
 
 !!!!!! make sure that icon have ico in extantion !!!!!!   
 
+___________________had site ghadi nfe3kum_______________________
+
+https://pyinstaller.org/en/stable/
+
 
 _______________MMSO__Group___________________
