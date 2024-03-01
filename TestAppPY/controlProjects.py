@@ -119,3 +119,7 @@ for i in range (len(keysDicts)):
         indexContent = openIndex.write(addCards)
         print(f'we add {diference} cards at {keysDicts[i]} profil ___DONE')
         openIndex.close()
+
+newProjectOwner = str(input("Who want to Create a project,'KHALID','ANAS','ZAKARIA','MOHAMED' ?"))
+numberNewProjects = int(input("How many You want to create ?"))
+newProjectOwner = newProjectOwner.upper() # change word to upperCase

@@ -1,0 +1,19 @@
+_______cmnd to instal pyInstaler____________
+
+pip install -U pyinstaller
+
+
+________ commande to export exe ____________
+
+ pyinstaller ...
+  -F   (all in 1 file)
+  -w   (removes terminal window)
+  -i icon.ico  (adds custom icon to .exe)
+  clock.py  (name of your main python file)
+
+_____________________________________________
+
+!!!!!! make sure that icon have ico in extantion !!!!!!   
+
+
+_______________MMSO__Group___________________
