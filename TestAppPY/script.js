@@ -4,6 +4,7 @@ let linkContactUs = document.getElementById("linkContactUs");
 let btnClose2 = document.getElementById("btnClose2");
 
 //------------on click contact US------------
+
 linkContactUs.addEventListener("click", () => {
   contactUs.classList.remove("d-none");
   contactUs.style.zIndex = "999";
@@ -11,12 +12,14 @@ linkContactUs.addEventListener("click", () => {
     elemstn[k].classList.add("blur");
   }
 });
+
 btnClose2.addEventListener("click", () => {
   contactUs.classList.add("d-none");
   for (let i = 2; i <= elemstn.length; i++) {
     elemstn[i].classList.remove("blur");
   }
 });
+
 // _______________________________________________________
 // New About Us
 document.getElementsByClassName("tablink")[0].click();

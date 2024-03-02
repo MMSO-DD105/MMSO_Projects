@@ -1,17 +1,26 @@
 /* _______________Style aside main & body_________________ */
-body {
-  display: flex;
+body,html {
   margin: 0px;
   padding: 0px;
+  height: 100%;
 }
 aside {
+  height: 100%;
   width: 30%;
   background-color: aqua;
+  position: fixed;
+  left: 0;
 }
 main {
   width: 70%;
+  height: 100%;
   background-color: rgb(152, 0, 240);
   display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 30.9%;
+  top: 0;
+  overflow-y: scroll;
 }
 
 /* ______________Container head part info______________ */
@@ -19,7 +28,7 @@ main {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 30vh;
+  height: 30%;
 }
 
 /* _____________ Style children Aside___________________ */
@@ -27,24 +36,24 @@ main {
   border: solid 2px black;
   height: 100px;
   width: 100px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .infoMember {
   border: solid 2px rgb(148, 18, 18);
   height: 100px;
   width: 60%;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .allInfo {
   border: solid 2px rgb(148, 18, 18);
-  height: 68vh;
-  border-radius: 10px;
+  height: 60%;
+  border-radius: 5px;
   margin: 4px;
 }
 
 /* ___________Allcard style_________ */
 .python {
-  height: 260px;
+  height: 270px;
   width: 200px;
   margin: 10px;
 }
