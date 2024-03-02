@@ -1,0 +1,53 @@
+/* _______________Style aside main & body_________________ */
+body {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+aside {
+  width: 30%;
+  background-color: aqua;
+}
+main {
+  width: 70%;
+  background-color: rgb(152, 0, 240);
+  display: flex;
+}
+
+/* ______________Container head part info______________ */
+.container_member {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 30vh;
+}
+
+/* _____________ Style children Aside___________________ */
+.imgMember {
+  border: solid 2px black;
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+}
+.infoMember {
+  border: solid 2px rgb(148, 18, 18);
+  height: 100px;
+  width: 60%;
+  border-radius: 10px;
+}
+.allInfo {
+  border: solid 2px rgb(148, 18, 18);
+  height: 68vh;
+  border-radius: 10px;
+  margin: 4px;
+}
+
+/* ___________Allcard style_________ */
+.python {
+  height: 260px;
+  width: 200px;
+  margin: 10px;
+}
+.python p {
+  font-size: 0.7em !important;
+}
