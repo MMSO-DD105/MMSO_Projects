@@ -46,15 +46,6 @@ nav {
   border: 1px solid rgba(255, 255, 255, 0.071) !important;
 }
 
-
-
-
-
-
-
-
-
-
 body {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
@@ -201,4 +192,19 @@ a:hover {
 .custom-note a {
   color: #555;
   font-weight: 900 !important;
+}
+.w3-modal {
+  background-color: rgba(0, 0, 0, 0.747);
+  backdrop-filter: blur(5px);
+}
+.w3-modal-content {
+  background-color: black;
+  border-radius: 10px !important;
+}
+.w3-container {
+  background-color: rgba(0, 0, 0, 0.795) !important;
+  border-radius: 10px;
+}
+.btnClose {
+  border-radius: 10px;
 }

@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,22 +15,23 @@
     />
     <!--FrameWork W3School-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Main</title>
   </head>
   <body>
     <!--about Us-->
     <div id="aboutUs" class="w3-modal">
       <div class="w3-modal-content w3-card-4 w3-animate-zoom">
-        <header class="w3-container w3-pale-yellow">
+        <header class="w3-container text-bg-dark">
           <span
             onclick="document.getElementById('aboutUs').style.display='none'"
-            class="w3-button w3-pale-green w3-xlarge w3-display-topright"
-            >&times;</span
-          >
+            class="w3-button w3-xlarge w3-display-topright btnClose"
+            ><i class="bi bi-x-lg"></i
+          ></span>
           <h2>MMSO</h2>
         </header>
 
-        <div class="w3-bar w3-border-bottom w3-pale-blue">
+        <div class="w3-bar w3-border-bottom text-bg-dark">
           <button
             class="tablink w3-bar-item w3-button"
             onclick="openparagraph(event, 'about')"
@@ -46,7 +46,7 @@
           </button>
         </div>
 
-        <div id="about" class="w3-container paragraph w3-dark-grey">
+        <div id="about" class="w3-container paragraph text-bg-dark">
           <h1>About</h1>
           <p>
             MMSO, derived from the names Marzoug, Mahfoud, Sidqui, and Ouafik,
@@ -59,7 +59,7 @@
           </p>
         </div>
 
-        <div id="objectives" class="w3-container paragraph w3-dark-grey">
+        <div id="objectives" class="w3-container paragraph text-bg-dark">
           <h1>Objectives</h1>
           <p>
             At MMSO, our objectives are straightforward: to master Git for
@@ -72,9 +72,9 @@
           </p>
         </div>
 
-        <div class="w3-container w3-pale-blue w3-padding">
+        <div class="w3-container w3-padding text-bg-dark rounded-bottom-1">
           <button
-            class="w3-button w3-right w3-white w3-border"
+            class="w3-button w3-right w3-border"
             onclick="document.getElementById('aboutUs').style.display='none'"
           >
             Close
