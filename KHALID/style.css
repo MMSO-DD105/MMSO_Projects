@@ -11,6 +11,7 @@ aside {
   position: fixed;
   left: 0;
   padding: 0;
+  z-index: 99999;
 }
 main {
   width: 70%;
@@ -60,4 +61,46 @@ main {
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+}
+#btnMenu {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 99999;
+  display: none;
+  font-size: 20px;
+}
+#btncloseAside {
+  display: none;
+}
+@media screen and (max-width: 1100px) {
+  #btncloseAside {
+    display: inline-block;
+  }
+  aside {
+    display: none;
+    width: 40%;
+  }
+  main {
+    width: 100%;
+    left: 12px;
+  }
+  #btnMenu {
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 800px) {
+  aside {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 700px) {
+  aside {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 500px) {
+  aside {
+    width: 100%;
+  }
 }
