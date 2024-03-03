@@ -3,51 +3,64 @@ let startBtn = document.getElementById("startBtn");
 let title = document.getElementById("title");
 let takeControl = document.getElementById("takeControl");
 let icons = document.getElementById("icons");
-let snake = document.createElement("div");
-snake.style.height = "10px";
-snake.style.width = "10px";
-snake.classList.add("bg-warning");
-snake.style.position = "absolute";
-startBtn.addEventListener("click", () => {
-  title.remove();
-  takeControl.remove();
-  icons.remove();
-  startBtn.remove();
-  container.append(snake);
-});
+let canvas = document.createElement("canvas");
+canvas.style.height = "100%";
+canvas.style.width = "100%";
+canvas.classList.add("bg-info");
+// startBtn.addEventListener("click", () => {
+title.remove();
+takeControl.remove();
+icons.remove();
+startBtn.remove();
+container.append(canvas);
+// });
 // control the snake :
-document.addEventListener("keydown", (event) => {
-  let snakeRect = snake.getBoundingClientRect();
-  let containerRect = container.getBoundingClientRect();
-  let widthSnake = snakeRect.width;
-  console.log(snakeRect);
-  console.log(containerRect);
+let snake = canvas.getContext("2d");
+snake.fillStyle = "red";
+let snakeWidth = 5;
+let snakeHeight = 5;
+let xSnake = centerSnake(canvas.width, snakeWidth);
+let ySnake = centerSnake(canvas.height, snakeHeight);
+
+function centerSnake(sizeContainer, size) {
+  return (sizeContainer - size) / 2;
+}
+
+function rectSnake(x, y) {
+  snake.clearRect(0, 0, canvas.width, canvas.height);
+  snake.fillRect(x, y, snakeHeight, snakeWidth);
+}
+rectSnake(xSnake, ySnake);
+
+window.addEventListener("keydown", (event) => {
   switch (event.key) {
     case "ArrowUp":
-      if (snakeRect.top - widthSnake < containerRect.top) {
-        return;
+      if (ySnake < 0) {
+        ySnake = canvas.height;
       }
-      snake.style.top = snakeRect.top - widthSnake + "px";
-      break; // i work with width because in this case i have the same value
+      ySnake -= 5;
+      break;
     case "ArrowRight":
-      if (snakeRect.left + widthSnake > containerRect.right - widthSnake) {
-        return;
+      if (xSnake > canvas.width) {
+        xSnake = 0;
       }
-      snake.style.left = snakeRect.left + widthSnake + "px";
+      xSnake += 5;
       break;
     case "ArrowDown":
-      if (snakeRect.top + widthSnake > containerRect.bottom - widthSnake) {
-        return;
+      if (ySnake > canvas.height) {
+        ySnake = 0;
       }
-      snake.style.top = snakeRect.top + widthSnake + "px";
+      ySnake += 5;
+
       break;
     case "ArrowLeft":
-      if (snakeRect.left - widthSnake < containerRect.left) {
-        return;
+      if (xSnake < 0) {
+        xSnake = canvas.width;
       }
-      snake.style.left = snakeRect.left - widthSnake + "px";
+      xSnake -= 5;
       break;
     default:
       break;
   }
+  rectSnake(xSnake, ySnake);
 });
