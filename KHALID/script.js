@@ -10,3 +10,10 @@ btncloseAside.addEventListener("click", (e) => {
   e.preventDefault();
   aside[0].style.display = "none";
 });
+window.addEventListener("resize", (e) => {
+  e.preventDefault();
+  let width = window.innerWidth;
+  if (width > 1100){
+    aside[0].style.display = "inline-block";
+  }
+});
