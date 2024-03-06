@@ -34,3 +34,19 @@ function openparagraph(evt, parName) {
   document.getElementById(parName).style.display = "block";
   evt.currentTarget.classList.add("w3-light-grey");
 }
+// New ContactUs
+document.getElementsByClassName("tablink")[0].click();
+
+function openparagraph(evt, parName) {
+  let i, x, tablinks;
+  x = document.getElementsByClassName("paragraph");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].classList.remove("w3-light-grey");
+  }
+  document.getElementById(parName).style.display = "block";
+  evt.currentTarget.classList.add("w3-light-grey");
+}

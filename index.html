@@ -84,88 +84,74 @@
       </div>
     </div>
     <!-- contact Us -->
-    <div
-      id="contactUs"
-      class="d-none container text-bg-dark w-50 h-75 rounded-3 mt-4 position-fixed top-50 start-50"
-    >
-      <div class="modal-header d-flex justify-content-end pt-2">
-        <button
-          id="btnClose2"
-          class="btn-close btn-close-white p-1 rounded-0"
-        ></button>
-      </div>
-      <div class="container h-50 mt-5">
-        <div
-          class="card d-flex flex-row justify-content-around h-50 w-100 mb-2 bg-transparent border-0"
-        >
-          <img
-            class="card-img w-25 rounded-circle"
-            src="media/avatar_zakaria.jpg"
-            alt="image two in about Us"
-          />
-          <div
-            class="card-text d-flex flex-column h-100 w-50 border border-2 border-white text-bg-dark rounded-5 text-center"
+    <div id="contactUs" class="w3-modal">
+      <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+        <header class="w3-container text-bg-dark">
+          <span
+            onclick="document.getElementById('contactUs').style.display='none'"
+            class="w3-button w3-xlarge w3-display-topright btnClose"
+            ><i class="bi bi-x-lg"></i
+          ></span>
+          <h2>MMSO</h2>
+        </header>
+
+        <div class="w3-bar w3-border-bottom text-bg-dark">
+          <button
+            class="tablink w3-bar-item w3-button"
+            onclick="openparagraph(event, 'about')"
           >
-            <h3><i class="bi bi-person-circle"></i> @pseudo</h3>
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-github"></i> Lorem, ipsum.</a
-            >
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-envelope-at"></i> test@gmail.com</a
-            >
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-telephone-forward-fill"></i> 0600000000</a
-            >
-          </div>
+            About
+          </button>
+          <button
+            class="tablink w3-bar-item w3-button"
+            onclick="openparagraph(event, 'objectives')"
+          >
+            Objectives
+          </button>
         </div>
-        <div
-          class="card d-flex flex-row justify-content-around h-50 w-100 mb-2 bg-transparent border-0"
-        >
-          <img
-            class="card-img w-25 rounded-circle"
-            src="media/avatar_khalid.jpg"
-            alt="image two in about Us"
-          />
-          <div
-            class="card-text d-flex flex-column h-100 w-50 border border-2 border-white text-bg-dark rounded-5 text-center"
-          >
-            <h3><i class="bi bi-person-circle"></i> @pseudo</h3>
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-github"></i> Lorem, ipsum.</a
-            >
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-envelope-at"></i> test@gmail.com</a
-            >
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-telephone-forward-fill"></i> 0600000000</a
-            >
-          </div>
+
+        <div id="about" class="w3-container paragraph text-bg-dark">
+          <h1>About</h1>
+          <p>
+            MMSO, derived from the names Marzoug, Mahfoud, Sidqui, and Ouafik,
+            represents a group of digital development interns. Founded by its
+            owners, MMSO serves as a platform for interns to collaborate on web
+            development projects, fostering teamwork and skill-sharing among its
+            members. Through MMSO, interns engage in collective learning
+            experiences and leverage each other's expertise to enhance their
+            digital proficiency.
+          </p>
         </div>
-        <div
-          class="card d-flex flex-row justify-content-around h-50 w-100 mb-2 bg-transparent border-0"
-        >
-          <img
-            class="card-img w-25 rounded-circle"
-            src="media/avatar_zakaria.jpg"
-            alt="image two in about Us"
-          />
-          <div
-            class="card-text d-flex flex-column h-100 w-50 border border-2 border-white text-bg-dark rounded-5 text-center"
+
+        <div id="objectives" class="w3-container paragraph text-bg-dark">
+          <h1>Objectives</h1>
+          <p>
+            At MMSO, our objectives are straightforward: to master Git for
+            version control, delve into essential web development languages like
+            JavaScript, HTML, and CSS, and explore frameworks such as Bootstrap,
+            Tailwind CSS, and W3.CSS. We prioritize teamwork, aiming to emulate
+            the collaborative spirit seen on platforms like GitHub. By focusing
+            on these objectives, we equip ourselves with the skills needed to
+            excel in digital development projects.
+          </p>
+        </div>
+
+        <div class="w3-container w3-padding text-bg-dark rounded-bottom-1">
+          <button
+            class="w3-button w3-right w3-border"
+            onclick="document.getElementById('aboutUs').style.display='none'"
           >
-            <h3><i class="bi bi-person-circle"></i> @pseudo</h3>
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-github"></i> Lorem, ipsum.</a
-            >
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-envelope-at"></i> test@gmail.com</a
-            >
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-telephone-forward-fill"></i> 0600000000</a
-            >
-          </div>
+            Close
+          </button>
         </div>
       </div>
     </div>
+    <!-- test -->
+    <button
+      id="btnClose2"
+      class="btn-close btn-close-white p-1 border border-2 border-black rounded-0"
+    ></button>
+    <!-- test -->
     <!--nav-->
     <nav class="navbar navbar-expand-md bg-dark navbar-dark fs-5 py-3">
       <div
