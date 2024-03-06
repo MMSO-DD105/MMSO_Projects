@@ -1,7 +1,6 @@
 let btnMenu = document.getElementById("btnMenu");
 let aside = document.getElementsByTagName("aside");
 let btncloseAside = document.getElementById("btncloseAside");
-console.log(aside[0].style);
 btnMenu.addEventListener("click", (e) => {
   e.preventDefault();
   aside[0].style.display = "inline-block";
@@ -58,18 +57,18 @@ promise
               cardPaths.scriptPath = data[i].path;
             } else if (data[i].name === "style.css") {
               cardPaths.stylePath = data[i].path;
-            } else if (data[i].name === "description.txt") {
+            } else if (data[i].name === "description.json") {
               let pathTxt =
                 `https://api.github.com/repos/${userName}/${reposName}/contents/` +
                 data[i].path;
               fetch(pathTxt)
-                .then((response) => {
-                  return response.json();
+                .then((responseDesc) => {
+                  return responseDesc.json();
                 })
-                .then((data) => {
-                  console.log(data.description);
+                .then((dataDesc) => {
+                  console.log(dataDesc.download_url);
                 })
-                .catch((error) => {
+                .catch((errorDesc) => {
                   console.log(
                     "There is an error in fetch of the text content (fetch number 2)"
                   );
