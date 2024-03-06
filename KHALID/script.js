@@ -66,7 +66,21 @@ promise
                   return responseDesc.json();
                 })
                 .then((dataDesc) => {
+                  console.log(dataDesc);
                   console.log(dataDesc.download_url);
+                  fetch(dataDesc.download_url)
+                    .then((response) => {
+                      return response.text();
+                    })
+                    .then((data) => {
+                      cardPaths.contentDescription = data;
+                      var cardText = document.createElement("p");
+                      cardText.classList.add("card-text");
+                      cardText.innerHTML = cardPaths.contentDescription;
+                    })
+                    .catch((error) => {
+                      console.log("There is an error in fetch of download url");
+                    });
                 })
                 .catch((errorDesc) => {
                   console.log(
@@ -87,16 +101,12 @@ promise
           cardBody.classList.add("card-body");
           let cardTitle = document.createElement("h6");
           cardTitle.classList.add("card-title");
-          let cardText = document.createElement("p");
-          cardText.classList.add("card-text");
-          cardText.innerHTML =
-            "Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test ";
           let btnCard = document.createElement("a");
           btnCard.setAttribute("href", cardPaths.btnHref);
           btnCard.classList.add("btn", "btn-primary", "w-75", "h-25", "fs-6");
           cardBody.append(cardTitle);
-          cardBody.append(cardText);
           cardBody.append(btnCard);
+          cardBody.append(cardText);
           card.append(imageCard);
           card.append(cardBody);
           main.append(card);
