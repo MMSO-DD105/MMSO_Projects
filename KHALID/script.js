@@ -38,13 +38,11 @@ promise
   .then((data) => {
     data.forEach((element) => {
       let urlForlder = apiUrl + "/" + element.name;
-      console.log(urlForlder);
       fetch(urlForlder)
         .then((response) => {
           return response.json();
         })
         .then((data) => {
-          console.log(data);
           let cardPaths = {
             btnHref: "",
             imgSrc: "",
@@ -52,7 +50,6 @@ promise
             stylePath: "",
             scriptPath: "",
           };
-          console.log(cardPaths);
           for (let i = 0; i < data.length; i++) {
             if (data[i].name === "index.html") {
               let PathFromDeroctry = data[i].path;
@@ -62,15 +59,28 @@ promise
             } else if (data[i].name === "style.css") {
               cardPaths.stylePath = data[i].path;
             } else if (data[i].name === "description.txt") {
-              cardPaths.contentDescription = data[i].path;
+              let pathTxt =
+                `https://api.github.com/repos/${userName}/${reposName}/contents/` +
+                data[i].path;
+              fetch(pathTxt)
+                .then((response) => {
+                  return response.json();
+                })
+                .then((data) => {
+                  console.log(data.description);
+                })
+                .catch((error) => {
+                  console.log(
+                    "There is an error in fetch of the text content (fetch number 2)"
+                  );
+                });
             } else {
               let PathFromDeroctry = data[i].path;
               cardPaths.imgSrc = removeFromString(PathFromDeroctry, "/");
             }
           }
-          console.log(cardPaths);
           let card = document.createElement("div");
-          card.classList.add("card", "text-center", "col-3");
+          card.classList.add("card", "text-center", "python", "col-3");
           let imageCard = document.createElement("img");
           imageCard.setAttribute("src", cardPaths.imgSrc);
           imageCard.classList.add("card-img-top");
@@ -94,12 +104,15 @@ promise
         })
         .catch((error) => {
           console.log(
-            "There was a problem with your fetch operation ---> ",
+            "There is an error in fetch of the card creation (fetch Number 3)",
             error
           );
         });
     });
   })
   .catch((error) => {
-    console.log("There was a problem with your fetch operation ---> ", error);
+    console.log(
+      "There is an error in fetch of the card creation (fetch Number 1)",
+      error
+    );
   });
