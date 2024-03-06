@@ -13,7 +13,84 @@ btncloseAside.addEventListener("click", (e) => {
 window.addEventListener("resize", (e) => {
   e.preventDefault();
   let width = window.innerWidth;
-  if (width > 1100){
+  if (width > 1100) {
     aside[0].style.display = "inline-block";
   }
 });
+
+const userName = "MMSO-DD105";
+const reposName = "MMSO_Projects";
+const listOwners = ["KHALID", "ANAS", "ZAKARIA", "MOHAMED"];
+const apiUrl = `https://api.github.com/repos/${userName}/${reposName}/contents/${listOwners[0]}/projects`;
+const mainList = document.getElementsByTagName("main");
+const main = mainList[0];
+
+let promise = fetch(apiUrl); // fetch function return a promise
+
+promise
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    data.forEach((element) => {
+      let urlForlder = apiUrl + "/" + element.name;
+      console.log(urlForlder);
+      fetch(urlForlder)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+          let cardPaths = {
+            btnHref: "",
+            imgSrc: "",
+            contentDescription: "",
+          };
+          for (let i = 0; i < data.length; i++) {
+            if (data[i].name === "index.html") {
+              cardPaths.btnHref = data[i].path;
+            } else if (data[i].name === "script.js") {
+              return;
+            } else if (data[i].name === "style.css") {
+              return;
+            } else if (data[i].name === "description.txt") {
+              cardPaths.contentDescription = data[i].path;
+            } else {
+              cardPaths.imgSrc = data[i].path;
+            }
+          }
+          console.log(cardPaths);
+          let card = document.createElement("div");
+          card.classList.add("card", "text-center", "col-3");
+          let imageCard = document.createElement("img");
+          imageCard.classList.add("card-img-top");
+          imageCard.setAttribute("src", cardPaths.imgSrc);
+          let cardBody = document.createElement("div");
+          cardBody.classList.add("card-body");
+          let cardTitle = document.createElement("h6");
+          cardTitle.classList.add("card-title");
+          let cardText = document.createElement("p");
+          cardText.classList.add("card-text");
+          cardText.innerHTML =
+            "Test Test Test Test Test Test Test Test Test Test Test Test Test Test Test ";
+          let btnCard = document.createElement("a");
+          btnCard.classList.add("btn", "btn-primary", "w-75", "h-25", "fs-6");
+          btnCard.setAttribute("href", cardPaths.btnHref);
+          cardBody.append(cardTitle);
+          cardBody.append(cardText);
+          cardBody.append(btnCard);
+          card.append(imageCard);
+          card.append(cardBody);
+          main.append(card);
+        })
+        .catch((error) => {
+          console.log(
+            "There was a problem with your fetch operation ---> ",
+            error
+          );
+        });
+    });
+  })
+  .catch((error) => {
+    console.log("There was a problem with your fetch operation ---> ", error);
+  });
