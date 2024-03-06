@@ -10,7 +10,22 @@ promise
     return response.json();
   })
   .then((data) => {
-    console.log(data);
+    data.forEach((element) => {
+      let urlForlders = apiUrl + "/" + element.name;
+      fetch(urlForlders)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          console.log(data);
+        })
+        .catch((error) => {
+          console.log(
+            "There was a problem with your fetch operation ---> ",
+            error
+          );
+        });
+    });
   })
   .catch((error) => {
     console.log("There was a problem with your fetch operation ---> ", error);
