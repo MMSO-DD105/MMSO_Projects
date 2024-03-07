@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,22 +15,24 @@
     />
     <!--FrameWork W3School-->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="website icon" href="media/websiteicon.png" />
     <title>Main</title>
   </head>
   <body>
     <!--about Us-->
     <div id="aboutUs" class="w3-modal">
       <div class="w3-modal-content w3-card-4 w3-animate-zoom">
-        <header class="w3-container w3-pale-yellow">
+        <header class="w3-container text-bg-dark">
           <span
             onclick="document.getElementById('aboutUs').style.display='none'"
-            class="w3-button w3-pale-green w3-xlarge w3-display-topright"
-            >&times;</span
-          >
+            class="w3-button w3-xlarge w3-display-topright btnClose"
+            ><i class="bi bi-x-lg"></i
+          ></span>
           <h2>MMSO</h2>
         </header>
 
-        <div class="w3-bar w3-border-bottom w3-pale-blue">
+        <div class="w3-bar w3-border-bottom text-bg-dark">
           <button
             class="tablink w3-bar-item w3-button"
             onclick="openparagraph(event, 'about')"
@@ -46,7 +47,7 @@
           </button>
         </div>
 
-        <div id="about" class="w3-container paragraph w3-dark-grey">
+        <div id="about" class="w3-container paragraph text-bg-dark">
           <h1>About</h1>
           <p>
             MMSO, derived from the names Marzoug, Mahfoud, Sidqui, and Ouafik,
@@ -59,7 +60,7 @@
           </p>
         </div>
 
-        <div id="objectives" class="w3-container paragraph w3-dark-grey">
+        <div id="objectives" class="w3-container paragraph text-bg-dark">
           <h1>Objectives</h1>
           <p>
             At MMSO, our objectives are straightforward: to master Git for
@@ -72,9 +73,9 @@
           </p>
         </div>
 
-        <div class="w3-container w3-pale-blue w3-padding">
+        <div class="w3-container w3-padding text-bg-dark rounded-bottom-1">
           <button
-            class="w3-button w3-right w3-white w3-border"
+            class="w3-button w3-right w3-border"
             onclick="document.getElementById('aboutUs').style.display='none'"
           >
             Close
@@ -83,85 +84,143 @@
       </div>
     </div>
     <!-- contact Us -->
-    <div
-      id="contactUs"
-      class="d-none container text-bg-dark w-50 h-75 rounded-3 mt-4 position-fixed top-50 start-50"
-    >
-      <div class="modal-header d-flex justify-content-end pt-2">
-        <button
-          id="btnClose2"
-          class="btn-close btn-close-white p-1 rounded-0"
-        ></button>
-      </div>
-      <div class="container h-50 mt-5">
-        <div
-          class="card d-flex flex-row justify-content-around h-50 w-100 mb-2 bg-transparent border-0"
-        >
-          <img
-            class="card-img w-25 rounded-circle"
-            src="media/avatar_zakaria.jpg"
-            alt="image two in about Us"
-          />
-          <div
-            class="card-text d-flex flex-column h-100 w-50 border border-2 border-white text-bg-dark rounded-5 text-center"
+    <div id="contactUs" class="w3-modal">
+      <div class="w3-modal-content w3-card-4 w3-animate-zoom">
+        <header class="w3-container text-bg-dark">
+          <span
+            onclick="document.getElementById('contactUs').style.display='none'"
+            class="w3-button w3-xlarge w3-display-topright btnClose"
+            ><i class="bi bi-x-lg"></i
+          ></span>
+          <h2>Contact Us</h2>
+        </header>
+
+        <div class="w3-bar w3-border-bottom text-bg-dark">
+          <button
+            class="tablink w3-bar-item w3-button"
+            onclick="openparagraph(event, 'sidqui')"
           >
-            <h3><i class="bi bi-person-circle"></i> @pseudo</h3>
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-github"></i> Lorem, ipsum.</a
-            >
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-envelope-at"></i> test@gmail.com</a
-            >
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-telephone-forward-fill"></i> 0600000000</a
-            >
+            Sidqui
+          </button>
+          <button
+            class="tablink w3-bar-item w3-button"
+            onclick="openparagraph(event, 'marzoug')"
+          >
+            Marzoug
+          </button>
+
+          <button
+            class="tablink w3-bar-item w3-button"
+            onclick="openparagraph(event, 'mahfoud')"
+          >
+            Mahfoud
+          </button>
+          <button
+            class="tablink w3-bar-item w3-button"
+            onclick="openparagraph(event, 'ouafik')"
+          >
+            Ouafik
+          </button>
+        </div>
+
+        <div id="sidqui" class="w3-container paragraph text-bg-dark">
+          <h1>Sidqui Zakaria</h1>
+          <div class="user">
+            <img src="media/avatar_zakaria.jpg" />
+            <div class="infoUser">
+              <h3><i class="bi bi-person-circle"></i> : @Zikoo_65</h3>
+              <a
+                class="fs-5 link-danger text-decoration-none"
+                href="https://github.com/Zak-65"
+                target="_blank"
+                ><i class="bi bi-github"></i> : Zak-65</a
+              >
+              <a
+                class="fs-5 link-danger text-decoration-none"
+                href="mailto:sidquizakaria1@gmail.com"
+                ><i class="bi bi-envelope-at"></i> : sidquizakaria1@gmail.com</a
+              >
+              <a
+                class="fs-5 link-danger text-decoration-none"
+                href="tel:0621728385"
+                ><i class="bi bi-telephone-forward-fill"></i> :
+                06.21.72.83.85</a
+              >
+            </div>
           </div>
         </div>
-        <div
-          class="card d-flex flex-row justify-content-around h-50 w-100 mb-2 bg-transparent border-0"
-        >
-          <img
-            class="card-img w-25 rounded-circle"
-            src="media/avatar_khalid.jpg"
-            alt="image two in about Us"
-          />
-          <div
-            class="card-text d-flex flex-column h-100 w-50 border border-2 border-white text-bg-dark rounded-5 text-center"
-          >
-            <h3><i class="bi bi-person-circle"></i> @pseudo</h3>
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-github"></i> Lorem, ipsum.</a
-            >
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-envelope-at"></i> test@gmail.com</a
-            >
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-telephone-forward-fill"></i> 0600000000</a
-            >
+
+        <div id="marzoug" class="w3-container paragraph text-bg-dark">
+          <h1>Marzoug Khalid</h1>
+          <div class="user">
+            <img src="media/avatar_khalid.jpg" />
+            <div class="infoUser">
+              <h3><i class="bi bi-person-circle"></i> : @mrzg_khalid</h3>
+              <a
+                class="fs-5 link-danger text-decoration-none"
+                href="https://github.com/khalidmarzou"
+                target="_blank"
+                ><i class="bi bi-github"> : khalidmarzou</i></a
+              >
+              <a
+                class="fs-5 link-danger text-decoration-none"
+                href="mailto:khalid_marzoug@outlook.fr"
+                ><i class="bi bi-envelope-at"></i> :
+                khalid_marzoug@outlook.fr</a
+              >
+              <a
+                class="fs-5 link-danger text-decoration-none"
+                href="tel:0611517876"
+                ><i class="bi bi-telephone-forward-fill"></i> :
+                06.11.51.78.76</a
+              >
+            </div>
           </div>
         </div>
-        <div
-          class="card d-flex flex-row justify-content-around h-50 w-100 mb-2 bg-transparent border-0"
-        >
-          <img
-            class="card-img w-25 rounded-circle"
-            src="media/avatar_zakaria.jpg"
-            alt="image two in about Us"
-          />
-          <div
-            class="card-text d-flex flex-column h-100 w-50 border border-2 border-white text-bg-dark rounded-5 text-center"
-          >
-            <h3><i class="bi bi-person-circle"></i> @pseudo</h3>
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-github"></i> Lorem, ipsum.</a
-            >
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-envelope-at"></i> test@gmail.com</a
-            >
-            <a class="fs-5 link-danger text-decoration-none"
-              ><i class="bi bi-telephone-forward-fill"></i> 0600000000</a
-            >
+        <div id="mahfoud" class="w3-container paragraph text-bg-dark">
+          <h1>Mahfoud Anas</h1>
+          <div class="user">
+            <img src="media/avatar_anas.jpg" />
+            <div class="infoUser">
+              <h3><i class="bi bi-person-circle"></i> @pseudo</h3>
+              <a class="fs-5 link-danger text-decoration-none"
+                ><i class="bi bi-github"></i> Lorem, ipsum.</a
+              >
+              <a class="fs-5 link-danger text-decoration-none"
+                ><i class="bi bi-envelope-at"></i> test@gmail.com</a
+              >
+              <a class="fs-5 link-danger text-decoration-none"
+                ><i class="bi bi-telephone-forward-fill"></i> 0600000000</a
+              >
+            </div>
           </div>
+        </div>
+        <div id="ouafik" class="w3-container paragraph text-bg-dark">
+          <h1>Mohamed Ouafik</h1>
+          <div class="user">
+            <img src="media/avatarOuafik.jpg" />
+            <div class="infoUser">
+              <h3><i class="bi bi-person-circle"></i> @pseudo</h3>
+              <a class="fs-5 link-danger text-decoration-none"
+                ><i class="bi bi-github"></i> Lorem, ipsum.</a
+              >
+              <a class="fs-5 link-danger text-decoration-none"
+                ><i class="bi bi-envelope-at"></i> test@gmail.com</a
+              >
+              <a class="fs-5 link-danger text-decoration-none"
+                ><i class="bi bi-telephone-forward-fill"></i> 0600000000</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="w3-container w3-padding text-bg-dark rounded-bottom-1">
+          <button
+            class="w3-button w3-right w3-border"
+            onclick="document.getElementById('contactUs').style.display='none'"
+          >
+            Close
+          </button>
         </div>
       </div>
     </div>
@@ -172,9 +231,9 @@
       >
         <a class="navbar-brand ms-1" href="#">
           <img
-            src="media/logo.png"
+            src="media/mmsologo.png"
             alt=""
-            height="28"
+            height="35"
             class="d-inline-block align-text-top"
           />
         </a>
@@ -191,7 +250,13 @@
             >
           </li>
           <li class="nav-item">
-            <a href="#" id="linkContactUs" class="nav-link">CONTACT US</a>
+            <a
+              href="#"
+              id="linkContactUs"
+              onclick="document.getElementById('contactUs').style.display='block'"
+              class="nav-link"
+              >Contact Us</a
+            >
           </li>
         </ul>
       </div>

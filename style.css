@@ -22,39 +22,6 @@ nav {
   }
 }
 
-#contactUs {
-  transform: translate(-50%, -50%);
-}
-@media screen and (max-width: 900px) {
-}
-@media screen and (max-width: 900px) {
-  #contactUs {
-    width: 75% !important;
-  }
-}
-
-.blur {
-  filter: blur(3.7px);
-}
-
-#contactUs {
-  background: rgba(0, 0, 0, 0.89) !important;
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  border-radius: 10px !important;
-  border: 1px solid rgba(255, 255, 255, 0.071) !important;
-}
-
-
-
-
-
-
-
-
-
-
 body {
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
@@ -201,4 +168,37 @@ a:hover {
 .custom-note a {
   color: #555;
   font-weight: 900 !important;
+}
+.w3-modal {
+  background-color: rgba(0, 0, 0, 0.747);
+  backdrop-filter: blur(5px);
+}
+.w3-modal-content {
+  background-color: black;
+  border-radius: 10px !important;
+}
+.w3-container {
+  background-color: rgba(0, 0, 0, 0.795) !important;
+  border-radius: 10px;
+}
+.btnClose {
+  border-radius: 10px;
+}
+
+.infoUser {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  text-align: center;
+  justify-content: space-between;
+}
+.user {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.user > img {
+  height: 150px;
+  width: 200px;
+  border-radius: 20px;
 }
