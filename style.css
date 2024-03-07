@@ -190,6 +190,7 @@ a:hover {
   flex-direction: column;
   width: 80%;
   text-align: center;
+  justify-content: space-between;
 }
 .user {
   display: flex;
