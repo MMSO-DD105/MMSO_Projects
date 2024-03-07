@@ -94,7 +94,6 @@ promise
                         "btn",
                         "btn-primary",
                         "w-75",
-                        "h-25",
                         "fs-6"
                       );
                       btnCard.textContent = "Lunche";

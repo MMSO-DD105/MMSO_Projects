@@ -18,6 +18,7 @@ main {
   height: 100%;
   display: flex;
   justify-content: center;
+  align-items: start;
   position: fixed;
   left: 30.9%;
   top: 0;
@@ -50,7 +51,7 @@ main {
 
 /* ___________Allcard style_________ */
 .python {
-  height: 270px;
+  height: 420px;
   width: 200px;
   margin: 10px;
 }
