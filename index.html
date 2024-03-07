@@ -92,66 +92,138 @@
             class="w3-button w3-xlarge w3-display-topright btnClose"
             ><i class="bi bi-x-lg"></i
           ></span>
-          <h2>MMSO</h2>
+          <h2>Contact Us</h2>
         </header>
 
         <div class="w3-bar w3-border-bottom text-bg-dark">
           <button
             class="tablink w3-bar-item w3-button"
-            onclick="openparagraph(event, 'about')"
+            onclick="openparagraph(event, 'sidqui')"
           >
-            About
+            Sidqui
           </button>
           <button
             class="tablink w3-bar-item w3-button"
-            onclick="openparagraph(event, 'objectives')"
+            onclick="openparagraph(event, 'marzoug')"
           >
-            Objectives
+            Marzoug
+          </button>
+
+          <button
+            class="tablink w3-bar-item w3-button"
+            onclick="openparagraph(event, 'mahfoud')"
+          >
+            Mahfoud
+          </button>
+          <button
+            class="tablink w3-bar-item w3-button"
+            onclick="openparagraph(event, 'ouafik')"
+          >
+            Ouafik
           </button>
         </div>
 
-        <div id="about" class="w3-container paragraph text-bg-dark">
-          <h1>About</h1>
-          <p>
-            MMSO, derived from the names Marzoug, Mahfoud, Sidqui, and Ouafik,
-            represents a group of digital development interns. Founded by its
-            owners, MMSO serves as a platform for interns to collaborate on web
-            development projects, fostering teamwork and skill-sharing among its
-            members. Through MMSO, interns engage in collective learning
-            experiences and leverage each other's expertise to enhance their
-            digital proficiency.
-          </p>
+        <div id="sidqui" class="w3-container paragraph text-bg-dark">
+          <h1>Sidqui Zakaria</h1>
+          <div class="user">
+            <img src="media/avatar_zakaria.jpg" />
+            <div class="infoUser">
+              <h3><i class="bi bi-person-circle"></i> : @Zikoo_65</h3>
+              <a
+                class="fs-5 link-danger text-decoration-none"
+                href="https://github.com/Zak-65"
+                target="_blank"
+                ><i class="bi bi-github"></i> : Zak-65</a
+              >
+              <a
+                class="fs-5 link-danger text-decoration-none"
+                href="mailto:sidquizakaria1@gmail.com"
+                ><i class="bi bi-envelope-at"></i> : sidquizakaria1@gmail.com</a
+              >
+              <a
+                class="fs-5 link-danger text-decoration-none"
+                href="tel:0621728385"
+                ><i class="bi bi-telephone-forward-fill"></i> :
+                06.21.72.83.85</a
+              >
+            </div>
+          </div>
         </div>
 
-        <div id="objectives" class="w3-container paragraph text-bg-dark">
-          <h1>Objectives</h1>
-          <p>
-            At MMSO, our objectives are straightforward: to master Git for
-            version control, delve into essential web development languages like
-            JavaScript, HTML, and CSS, and explore frameworks such as Bootstrap,
-            Tailwind CSS, and W3.CSS. We prioritize teamwork, aiming to emulate
-            the collaborative spirit seen on platforms like GitHub. By focusing
-            on these objectives, we equip ourselves with the skills needed to
-            excel in digital development projects.
-          </p>
+        <div id="marzoug" class="w3-container paragraph text-bg-dark">
+          <h1>Marzoug Khalid</h1>
+          <div class="user">
+            <img src="media/avatar_khalid.jpg" />
+            <div class="infoUser">
+              <h3><i class="bi bi-person-circle"></i> : @mrzg_khalid</h3>
+              <a
+                class="fs-5 link-danger text-decoration-none"
+                href="https://github.com/khalidmarzou"
+                target="_blank"
+                ><i class="bi bi-github"> : khalidmarzou</i></a
+              >
+              <a
+                class="fs-5 link-danger text-decoration-none"
+                href="mailto:khalid_marzoug@outlook.fr"
+                ><i class="bi bi-envelope-at"></i> :
+                khalid_marzoug@outlook.fr</a
+              >
+              <a
+                class="fs-5 link-danger text-decoration-none"
+                href="tel:0611517876"
+                ><i class="bi bi-telephone-forward-fill"></i> :
+                06.11.51.78.76</a
+              >
+            </div>
+          </div>
+        </div>
+        <div id="mahfoud" class="w3-container paragraph text-bg-dark">
+          <h1>Mahfoud Anas</h1>
+          <div class="user">
+            <img src="media/avatar_anas.jpg" />
+            <div class="infoUser">
+              <h3><i class="bi bi-person-circle"></i> @pseudo</h3>
+              <a class="fs-5 link-danger text-decoration-none"
+                ><i class="bi bi-github"></i> Lorem, ipsum.</a
+              >
+              <a class="fs-5 link-danger text-decoration-none"
+                ><i class="bi bi-envelope-at"></i> test@gmail.com</a
+              >
+              <a class="fs-5 link-danger text-decoration-none"
+                ><i class="bi bi-telephone-forward-fill"></i> 0600000000</a
+              >
+            </div>
+          </div>
+        </div>
+        <div id="ouafik" class="w3-container paragraph text-bg-dark">
+          <h1>Mohamed Ouafik</h1>
+          <div class="user">
+            <img src="media/avatarOuafik.jpg" />
+            <div class="infoUser">
+              <h3><i class="bi bi-person-circle"></i> @pseudo</h3>
+              <a class="fs-5 link-danger text-decoration-none"
+                ><i class="bi bi-github"></i> Lorem, ipsum.</a
+              >
+              <a class="fs-5 link-danger text-decoration-none"
+                ><i class="bi bi-envelope-at"></i> test@gmail.com</a
+              >
+              <a class="fs-5 link-danger text-decoration-none"
+                ><i class="bi bi-telephone-forward-fill"></i> 0600000000</a
+              >
+            </div>
+          </div>
         </div>
 
         <div class="w3-container w3-padding text-bg-dark rounded-bottom-1">
           <button
             class="w3-button w3-right w3-border"
-            onclick="document.getElementById('aboutUs').style.display='none'"
+            onclick="document.getElementById('contactUs').style.display='none'"
           >
             Close
           </button>
         </div>
       </div>
     </div>
-    <!-- test -->
-    <button
-      id="btnClose2"
-      class="btn-close btn-close-white p-1 border border-2 border-black rounded-0"
-    ></button>
-    <!-- test -->
     <!--nav-->
     <nav class="navbar navbar-expand-md bg-dark navbar-dark fs-5 py-3">
       <div
@@ -178,7 +250,13 @@
             >
           </li>
           <li class="nav-item">
-            <a href="#" id="linkContactUs" class="nav-link">CONTACT US</a>
+            <a
+              href="#"
+              id="linkContactUs"
+              onclick="document.getElementById('contactUs').style.display='block'"
+              class="nav-link"
+              >Contact Us</a
+            >
           </li>
         </ul>
       </div>
