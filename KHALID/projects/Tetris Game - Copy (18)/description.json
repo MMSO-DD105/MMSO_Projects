@@ -1,1 +1,0 @@
-A basic web game built with HTML, CSS, and JavaScript. Players control a div at the bottom of the screen, tasked with eating divs appearing randomly at the top. The goal is to consume as many divs as possible while avoiding collisions with the edges.
