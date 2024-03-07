@@ -1,0 +1,21 @@
+@keyframes animationTopToBottom {
+  0% {
+    top: 0;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 75%;
+    opacity: 0;
+  }
+}
+
+body > div > div:first-of-type {
+  animation-name: animationTopToBottom;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
