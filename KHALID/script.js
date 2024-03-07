@@ -42,12 +42,13 @@ promise
           return response.json();
         })
         .then((data) => {
-          let cardPaths = {
+          var cardPaths = {
             btnHref: "",
             imgSrc: "",
             contentDescription: "",
             stylePath: "",
             scriptPath: "",
+            cardTitle: element.name,
           };
           for (let i = 0; i < data.length; i++) {
             if (data[i].name === "index.html") {
@@ -72,6 +73,40 @@ promise
                     })
                     .then((data) => {
                       cardPaths.contentDescription = data;
+                      let card = document.createElement("div");
+                      card.classList.add(
+                        "card",
+                        "text-center",
+                        "python",
+                        "col-3"
+                      );
+                      let imageCard = document.createElement("img");
+                      imageCard.setAttribute("src", cardPaths.imgSrc);
+                      imageCard.classList.add("card-img-top");
+                      let cardBody = document.createElement("div");
+                      cardBody.classList.add("card-body");
+                      let cardTitle = document.createElement("h6");
+                      cardTitle.classList.add("card-title");
+                      cardTitle.textContent = cardPaths.cardTitle;
+                      let btnCard = document.createElement("a");
+                      btnCard.setAttribute("href", cardPaths.btnHref);
+                      btnCard.classList.add(
+                        "btn",
+                        "btn-primary",
+                        "w-75",
+                        "h-25",
+                        "fs-6"
+                      );
+                      btnCard.textContent = "Lunche";
+                      let cardText = document.createElement("p");
+                      cardText.classList.add("card-text");
+                      cardText.innerHTML = cardPaths.contentDescription;
+                      cardBody.append(cardTitle);
+                      cardBody.append(cardText);
+                      cardBody.append(btnCard);
+                      card.append(imageCard);
+                      card.append(cardBody);
+                      main.append(card);
                     })
                     .catch((error) => {
                       console.log("There is an error in fetch of download url");
@@ -87,27 +122,6 @@ promise
               cardPaths.imgSrc = removeFromString(PathFromDeroctry, "/");
             }
           }
-          let card = document.createElement("div");
-          card.classList.add("card", "text-center", "python", "col-3");
-          let imageCard = document.createElement("img");
-          imageCard.setAttribute("src", cardPaths.imgSrc);
-          imageCard.classList.add("card-img-top");
-          let cardBody = document.createElement("div");
-          cardBody.classList.add("card-body");
-          let cardTitle = document.createElement("h6");
-          cardTitle.classList.add("card-title");
-          let btnCard = document.createElement("a");
-          btnCard.setAttribute("href", cardPaths.btnHref);
-          btnCard.classList.add("btn", "btn-primary", "w-75", "h-25", "fs-6");
-          cardBody.append(cardTitle);
-          cardBody.append(btnCard);
-          let cardText = document.createElement("p");
-          cardText.classList.add("card-text");
-          cardText.innerHTML = cardPaths.contentDescription;
-          cardBody.append(cardText);
-          card.append(imageCard);
-          card.append(cardBody);
-          main.append(card);
         })
         .catch((error) => {
           console.log(
