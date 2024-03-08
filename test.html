@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let container = document.createElement("div");
+      container.style.height = "100px";
+      container.style.width = "100px";
+      container.style.backgroundColor = "red";
+      document.body.append(container);
+      let container1 = document.createElement("div");
+      container1.style.height = "100px";
+      container1.style.width = "100px";
+      container1.style.backgroundColor = "green";
+      document.body.append(container1);
+      let button = document.createElement("button");
+      button.innerHTML = "Click me";
+      document.body.append(button);
+      document.body.style.display = "flex";
+      document.body.style.gap = "15px";
+      button.addEventListener("click", (e) => {
+        e.preventDefault();
+        let containerRect = container.getBoundingClientRect();
+        let containerRect1 = container1.getBoundingClientRect();
+        container1.style.position = "relative";
+        container1.style.right = containerRect1.x - containerRect.x + "px";
+        container.style.position = "relative";
+        container.style.left = containerRect1.x - containerRect.x + "px";
+        console.log(containerRect.x);
+        console.log(containerRect1.x);
+      });
+    </script>
+  </body>
+</html>

@@ -78,11 +78,11 @@ promise
                         "card",
                         "text-center",
                         "python",
-                        "col-3"
+                        "col-3","d-flex","flex-column","justify-content-between"
                       );
                       let imageCard = document.createElement("img");
                       imageCard.setAttribute("src", cardPaths.imgSrc);
-                      imageCard.classList.add("card-img-top");
+                      imageCard.classList.add("card-img-top h-25");
                       let cardBody = document.createElement("div");
                       cardBody.classList.add("card-body");
                       let cardTitle = document.createElement("h6");

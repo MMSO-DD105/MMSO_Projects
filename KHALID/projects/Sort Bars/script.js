@@ -52,19 +52,42 @@ document.addEventListener("DOMContentLoaded", (e) => {
       container.append(listDivs[i]);
     }, 50 * i);
   }
-  let button1 = document.createElement("a");
-  button1.setAttribute("href", "#");
-  button1.textContent = "Asc";
-  button1.classList.add("btn");
-  button1.classList.add("btn-success");
-  document.body.append(button1);
-  let button2 = document.createElement("a");
-  button2.setAttribute("href", "#");
-  button2.textContent = "Desc";
-  button2.classList.add("btn");
-  button2.classList.add("btn-warning");
-  document.body.append(button2);
+  let buttonAsc = document.createElement("a");
+  buttonAsc.setAttribute("href", "#");
+  buttonAsc.textContent = "Asc";
+  buttonAsc.classList.add("btn");
+  buttonAsc.classList.add("btn-success");
+  document.body.append(buttonAsc);
+  let buttonDesc = document.createElement("a");
+  buttonDesc.setAttribute("href", "#");
+  buttonDesc.textContent = "Desc";
+  buttonDesc.classList.add("btn");
+  buttonDesc.classList.add("btn-warning");
+  document.body.append(buttonDesc);
+  buttonAsc.addEventListener("click", (e) => {
+    e.preventDefault();
+    let containerChildren = Array.from(container.children);
+    containerChildren.sort((element, element1) => {
+      return element.clientHeight - element1.clientHeight;
+    });
+    container.innerHTML = "";
+    containerChildren.map((element, index, array) => {
+      setTimeout(() => {
+        container.append(element);
+      }, 50 * index);
+    });
+  });
+  buttonDesc.addEventListener("click", (e) => {
+    e.preventDefault();
+    let containerChildren = Array.from(container.children);
+    containerChildren.sort((element, element1) => {
+      return -element.clientHeight + element1.clientHeight;
+    });
+    container.innerHTML = "";
+    containerChildren.map((element, index, array) => {
+      setTimeout(() => {
+        container.append(element);
+      }, 50 * index);
+    });
+  });
 });
-
-let buttons = document.getElementsByTagName("button");
-console.log(buttons);
