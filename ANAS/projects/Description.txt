@@ -1,0 +1,2 @@
+Tetris is a classic tile-matching puzzle video game where players rotate and move falling blocks to create complete horizontal lines, preventing the blocks from stacking up to the top of the playing field.
+Space Adventure is a retro-style arcade game where players pilot a spaceship, defending Earth from waves of invading alien spacecraft by shooting them down while dodging enemy fire and obstacles.
