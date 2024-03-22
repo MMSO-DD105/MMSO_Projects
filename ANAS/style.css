@@ -52,3 +52,9 @@ main {
 .python p {
   font-size: 0.7em !important;
 }
+@media (width>1140px) {
+  .python{
+  width:26%;
+}
+}
+
