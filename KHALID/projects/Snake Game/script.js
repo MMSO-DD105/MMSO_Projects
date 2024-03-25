@@ -7,13 +7,13 @@ let canvas = document.createElement("canvas");
 canvas.style.height = "100%";
 canvas.style.width = "100%";
 canvas.classList.add("bg-info");
-// startBtn.addEventListener("click", () => {
+startBtn.addEventListener("click", () => {
 title.remove();
 takeControl.remove();
 icons.remove();
 startBtn.remove();
 container.append(canvas);
-// });
+});
 // control the snake :
 let snake = canvas.getContext("2d");
 snake.fillStyle = "red";

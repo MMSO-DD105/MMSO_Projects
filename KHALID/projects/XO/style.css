@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+.boxMother {
+  width: 230px;
+  padding: 2px;
+  border: 1px solid;
+}
+.boxMother > div {
+  height: 70px;
+  width: 70px;
+  border: 1px solid;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  cursor: pointer;
+  user-select: none;
+}
+.boxMother > div:focus {
+  border-color: red;
+}
