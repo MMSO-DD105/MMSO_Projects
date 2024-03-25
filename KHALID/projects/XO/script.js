@@ -47,8 +47,63 @@ const computerBrain = () => {
   changeCount();
   // Code of Brain : ///////////////////
   let element;
-    
-  element.textContent = turn[countToChangeTurn];
+  const lignePossible = {
+    ligne012:
+      listSmallBoxes[0].textContent +
+      listSmallBoxes[1].textContent +
+      listSmallBoxes[2].textContent,
+    ligne345:
+      listSmallBoxes[3].textContent +
+      listSmallBoxes[4].textContent +
+      listSmallBoxes[5].textContent,
+    ligne678:
+      listSmallBoxes[6].textContent +
+      listSmallBoxes[7].textContent +
+      listSmallBoxes[8].textContent,
+    ligne036:
+      listSmallBoxes[0].textContent +
+      listSmallBoxes[3].textContent +
+      listSmallBoxes[6].textContent,
+    ligne147:
+      listSmallBoxes[1].textContent +
+      listSmallBoxes[4].textContent +
+      listSmallBoxes[7].textContent,
+    ligne258:
+      listSmallBoxes[2].textContent +
+      listSmallBoxes[5].textContent +
+      listSmallBoxes[8].textContent,
+    ligne246:
+      listSmallBoxes[2].textContent +
+      listSmallBoxes[4].textContent +
+      listSmallBoxes[6].textContent,
+    ligne048:
+      listSmallBoxes[0].textContent +
+      listSmallBoxes[4].textContent +
+      listSmallBoxes[8].textContent,
+  };
+  const ligneChecked = Object.keys(lignePossible).filter(
+    (value) =>
+      lignePossible[value].length === 2 &&
+      lignePossible[value][0] === lignePossible[value][1]
+  );
+  console.log(ligneChecked);
+  if (ligneChecked.length >= 1) {
+    const indexBoxesInLigne = parseInt(
+      ligneChecked[ligneChecked.length - 1].split("").reverse().join("")
+    )
+      .toString()
+      .split("")
+      .map((num) => parseInt(num));
+    element = indexBoxesInLigne.find(
+      (value) => listSmallBoxes[value].textContent === ""
+    );
+    console.log(indexBoxesInLigne);
+    console.log(element);
+    listSmallBoxes[element].textContent = turn[countToChangeTurn];
+  } else {
+    listSmallBoxes.find((value) => value.textContent === "").textContent =
+      turn[countToChangeTurn];
+  }
   //////////////////////
   itsUrTurnComputer();
 };
