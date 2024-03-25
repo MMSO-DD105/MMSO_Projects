@@ -89,11 +89,12 @@ const computerBrain = () => {
   console.log(ligneChecked);
   if (ligneChecked.length >= 1) {
     const indexBoxesInLigne = parseInt(
-      ligneChecked[ligneChecked.length - 1].split("").reverse().join("")
+      ligneChecked[0].split("").reverse().join("")
     )
       .toString()
       .split("")
       .map((num) => parseInt(num));
+
     element = indexBoxesInLigne.find(
       (value) => listSmallBoxes[value].textContent === ""
     );
@@ -101,9 +102,15 @@ const computerBrain = () => {
     console.log(element);
     listSmallBoxes[element].textContent = turn[countToChangeTurn];
   } else {
-    listSmallBoxes.find((value) => value.textContent === "").textContent =
-      turn[countToChangeTurn];
+    if (listSmallBoxes[4].textContent === "") {
+      listSmallBoxes[4].textContent = turn[countToChangeTurn];
+    } else {
+      let EmtyBoxes = listSmallBoxes.filter((item) => item.textContent === "");
+      EmtyBoxes[Math.floor(Math.random() * EmtyBoxes.length)].textContent =
+        turn[countToChangeTurn];
+    }
   }
   //////////////////////
   itsUrTurnComputer();
 };
+// khsso i chof OO hiya lwla 3d XX 08H25 25/03/224 bug in 0 + 2 + 3 mkibich irbah
